@@ -62,19 +62,36 @@ npm install
 
 ### 3. Set Up Environment Variables
 
-Create a `.env.local` file in the root directory:
+Copy the example environment file and configure your credentials:
 
-```env
-NEXT_PUBLIC_SUPABASE_URL=https://ibcvzmyjmjghxgdbdktq.supabase.co
-NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImliY3Z6bXlqbWpnaHhnZGJka3RxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk1NTE4MTAsImV4cCI6MjA3NTEyNzgxMH0.FQ2Vdgap9nfzEkXqpiy6dvgpG_FtQvPsxbbENIOY4gk
-GOOGLE_API_KEY=your_google_api_key_here
+```bash
+cp .env.local.example .env.local
 ```
 
-**Note**: Replace `your_google_api_key_here` with your actual API key from [Google AI Studio](https://aistudio.google.com/app/apikey)
+Then edit `.env.local` and add your credentials:
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+GOOGLE_API_KEY=your_google_api_key
+```
+
+**How to get your credentials:**
+
+1. **Supabase Credentials**:
+   - Go to [Supabase Dashboard](https://supabase.com/dashboard)
+   - Select your project
+   - Go to Settings → API
+   - Copy the `Project URL` and `anon public` key
+
+2. **Google API Key**:
+   - Go to [Google AI Studio](https://aistudio.google.com/app/apikey)
+   - Create a new API key
+   - Copy the key
 
 ### 4. Set Up Database
 
-1. Go to your Supabase Dashboard: https://supabase.com/dashboard/project/ibcvzmyjmjghxgdbdktq
+1. Go to your Supabase Dashboard and select your project
 2. Navigate to **SQL Editor** in the left sidebar
 3. Copy the contents of `database.sql` from this repository
 4. Paste into the SQL editor and click **Run**
