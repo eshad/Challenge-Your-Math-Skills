@@ -105,12 +105,18 @@ This will create:
 ### 5. Run Development Server
 
 ```bash
-npx next dev
+npm run dev
+```
+
+Or using npx:
+
+```bash
+npx next dev --turbo
 ```
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-**Important**: Use `npx next dev` instead of `npm run dev` to avoid version conflicts with globally installed Next.js.
+**Note**: This project uses Turbo mode for faster development and proper CSS compilation.
 
 ## 🗄️ Database Schema
 
