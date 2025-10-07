@@ -76,18 +76,6 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 GOOGLE_API_KEY=your_google_api_key
 ```
 
-**How to get your credentials:**
-
-1. **Supabase Credentials**:
-   - Go to [Supabase Dashboard](https://supabase.com/dashboard)
-   - Select your project
-   - Go to Settings → API
-   - Copy the `Project URL` and `anon public` key
-
-2. **Google API Key**:
-   - Go to [Google AI Studio](https://aistudio.google.com/app/apikey)
-   - Create a new API key
-   - Copy the key
 
 ### 4. Set Up Database
 
@@ -228,26 +216,6 @@ rm -rf .next node_modules/.cache
 npx next dev
 ```
 
-### Gemini API Errors
-- Ensure you're using a valid API key from [Google AI Studio](https://aistudio.google.com/app/apikey)
-- The app uses `gemini-2.5-flash` model (not the older `gemini-pro`)
-
-### Database Connection Issues
-- Verify your Supabase URL and Anon Key in `.env.local`
-- Check that RLS policies are properly configured
-- Ensure tables are created by running `database.sql`
-
-## 🚢 Deployment
-
-### Deploy to Vercel
-
-1. Push your code to GitHub
-2. Go to [Vercel](https://vercel.com) and import your repository
-3. Add environment variables:
-   - `NEXT_PUBLIC_SUPABASE_URL`
-   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
-   - `GOOGLE_API_KEY`
-4. Deploy!
 
 ## 📝 Implementation Notes
 
@@ -259,11 +227,6 @@ npx next dev
 4. **Row Level Security**: Enabled on Supabase with permissive policies for demo purposes
 5. **Type Safety**: Full TypeScript implementation with proper type definitions
 
-### Challenges Overcome
-
-- **Gemini Model Versions**: Updated from deprecated `gemini-pro` to `gemini-2.5-flash`
-- **CSS Build Issues**: Resolved Tailwind compilation by clearing build cache
-- **Next.js Version Conflicts**: Used `npx next dev` to ensure local version compatibility
 
 ## 🎯 Assessment Checklist
 
